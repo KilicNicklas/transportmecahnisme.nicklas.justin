@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Transportmechanismen in der Biomembran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #f7f7f7;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title"></h1>
+
+    <div id="content"></div>
+
+    <script>
+        const blogPost = {
+            title: "Wie Stoffe in und aus unseren Zellen gelangen – Transportmechanismen einfach erklärt",
+            sections: [
+                {
+                    heading: "1. Die Zellmembran – Türsteher der Zelle",
+                    text: "Die Biomembran besteht aus einer Doppelschicht aus Lipiden (Fetten), in der Proteine eingebettet sind..."
+                },
+                {
+                    heading: "2. Passiver Transport – ohne Energie, aber mit Richtung",
+                    text: "Beim passiven Transport bewegen sich Teilchen entlang eines Konzentrationsgefälles..."
+                },
+                {
+                    heading: "3. Aktiver Transport – mit Energie gegen das Gefälle",
+                    text: "Manchmal braucht die Zelle bestimmte Stoffe trotz ungünstigem Konzentrationsgefälle..."
+                },
+                {
+                    heading: "4. Vesikeltransport – für die ganz großen Sachen",
+                    text: "Manche Stoffe sind zu groß für Kanäle oder Carrier. Dann schnürt die Zelle kleine Bläschen (Vesikel) aus ihrer Membran ab..."
+                },
+                {
+                    heading: "5. Warum das alles wichtig ist",
+                    text: "Diese Transportprozesse sind lebensnotwendig: Ohne sie könnten Zellen keine Nährstoffe aufnehmen..."
+                },
+                {
+                    heading: "Fazit",
+                    text: "Ob durch Diffusion, Pumpen oder Vesikel – unsere Zellen haben clevere Wege gefunden, um mit ihrer Umwelt zu kommunizieren..."
+                }
+            ]
+        };
+
+        document.getElementById("title").innerText = blogPost.title;
+
+        const contentDiv = document.getElementById("content");
+
+        blogPost.sections.forEach(section => {
+            const sec = document.createElement("section");
+            const h2 = document.createElement("h2");
+            h2.innerText = section.heading;
+            const p = document.createElement("p");
+            p.innerText = section.text;
+            sec.appendChild(h2);
+            sec.appendChild(p);
+            contentDiv.appendChild(sec);
+        });
+    </script>
+
+</body>
+</html>
